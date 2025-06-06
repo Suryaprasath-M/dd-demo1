@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import mongoose from 'mongoose';
-import userRouter from '../mydemo/src/router/index.router';
+// import router from './src/router/index.router';
+import userRouter from './src/router/user.router'; // ✅ Import userRouter directly
 import cors from 'cors';
 
 const app = express(); // ✅ Move this to the top before using `app`
