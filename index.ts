@@ -10,6 +10,11 @@ app.use(cors()); // ✅ Now cors middleware is applied correctly
 app.use(express.json());
 app.use('/api', userRouter);  
 
+// ✅ Use userRouter for all routes under /api
+app.get('/', (_req: Request, res: Response) => {
+  res.send('🚀 Server is running successfully and deployed!');
+});
+
 console.log('Express server is running');
 
 try {
